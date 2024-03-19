@@ -14,6 +14,8 @@ class BSTNode{
 
 
 public class BinarySearchTreeExample {
+
+    //Inserting a node into the Binary Search tree
     public static BSTNode BSTInsert(BSTNode root,int val){
         BSTNode newNode = new BSTNode(val);
         if(root == null){
@@ -29,6 +31,8 @@ public class BinarySearchTreeExample {
         return root;
     }
 
+
+    //Searching a node in the Binary Search Tree
     public static boolean searchBST(BSTNode root, int val){
         if(root == null){
             return false;
@@ -41,6 +45,7 @@ public class BinarySearchTreeExample {
         return ans1||ans2;
     }
 
+    //Updating a node in the Binary Search Tree
     public static void BSTUpdate(BSTNode root,int oldVal, int newVal){
         if(root == null){
             return;
@@ -54,6 +59,8 @@ public class BinarySearchTreeExample {
         }
     }
 
+    //Deleting a node from the Binary Search Tree
+    //Step-1 Find the minimum valued node in the Binary Search Tree
     public static BSTNode findMinimumBSTNode(BSTNode root){
         if(root.left == null){
             return root;
@@ -84,6 +91,7 @@ public class BinarySearchTreeExample {
         return root;
     }
 
+    //Printing the tree using inorder traversal
     public static void printBSTTree(BSTNode root){
         if(root == null){
             return;
